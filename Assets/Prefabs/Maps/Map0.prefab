@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5361470476559726728}
+  - component: {fileID: -7088830438049098020}
   m_Layer: 0
   m_Name: Map0
   m_TagString: Untagged
@@ -36,6 +37,19 @@ Transform:
   - {fileID: 3686852056938792788}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7088830438049098020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225460682517565815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0860734f8362044a8e58f44df6b0e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolingCnt: 1
 --- !u!1001 &913776308113237495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48,13 +62,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6995126242915639357, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
+      propertyPath: _hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110,13 +128,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6995126242915639357, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
+      propertyPath: _hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -172,13 +194,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6995126242915639357, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
+      propertyPath: _hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.23
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -234,13 +260,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6995126242915639357, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
+      propertyPath: _hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,13 +326,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brick
       objectReference: {fileID: 0}
+    - target: {fileID: 6995126242915639357, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
+      propertyPath: _hp
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7837245518156531215, guid: 34c09a829f3ac3c499ce83f3a0cd83f3, type: 3}
       propertyPath: m_LocalPosition.z

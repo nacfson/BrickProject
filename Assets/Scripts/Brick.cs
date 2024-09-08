@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Brick : PoolableMono,IDamageable
 {
-    private static int _maxHp = 10;
+    private static int _maxHp = 100;
     public UnityEvent OnBrickBreak;
     private Renderer _renderer;
 
@@ -37,7 +37,6 @@ public class Brick : PoolableMono,IDamageable
         _renderer = transform.Find("Renderer").GetComponent<Renderer>();
         //HP = Random.Range(1,_maxHp);
         HP = _hp;
-        OnBrickBreak.AddListener(() => PoolManager.SInstance.Push(this));
     }
 
     private void Update()

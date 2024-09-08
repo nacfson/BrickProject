@@ -1,22 +1,30 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Transform _standardTrm;
     public BoxCollider2D DeadZoneCollider { get; private set; }
+    private int _mapIndex = 0;
+    private Map _currentMap;
+
+    public void RestartGame()
+    {
+        PoolManager.SInstance.Push(_currentMap);
+
+        CreateMap(_mapIndex);
+    }
     
     private void Start()
     {
-        Vector3 standardPos = _standardTrm.position;
-        for (int i = 0; i < 5; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                Brick brick = PoolManager.SInstance.Pop("Brick") as Brick;
-                brick.transform.position = standardPos + new Vector3(i,j,0);
-                brick.gameObject.SetActive(true);
-            }
-        }
+        CreateMap(_mapIndex);
         DeadZoneCollider = transform.Find("DeadZone").GetComponent<BoxCollider2D>();
+    }
+
+    private void CreateMap(int mapIndex)
+    {
+        _currentMap = PoolManager.SInstance.Pop($"Map{mapIndex}") as Map;
+        _currentMap.transform.position = _standardTrm.position;
+        _currentMap.Setting();
     }
 }

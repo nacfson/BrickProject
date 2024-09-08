@@ -49,7 +49,7 @@ public class Ball : PoolableMono
         if(CheckIsDie())
         {
             Enabled = false;
-            Parent.BallOnTheFloor(this);
+            Parent?.BallOnTheFloor(this);
         }
     }
 
