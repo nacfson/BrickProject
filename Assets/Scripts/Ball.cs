@@ -1,6 +1,7 @@
 using UnityEditor.Rendering;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Ball : PoolableMono
 {
@@ -50,6 +51,7 @@ public class Ball : PoolableMono
         {
             Enabled = false;
             Parent?.BallOnTheFloor(this);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -72,6 +74,4 @@ public class Ball : PoolableMono
     {
         BounceCount = 0;
     }
-
-
 }
