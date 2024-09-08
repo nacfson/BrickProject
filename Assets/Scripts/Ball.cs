@@ -40,7 +40,8 @@ public class Ball : PoolableMono
             {
                 damageable.Damaged();
             }
-            var reflectValue = Vector3.Reflect(_progressDirection,wallHit.normal);
+            var reflectValue = Vector3.Reflect(_progressDirection, wallHit.normal) + 
+                new Vector3(Random.value * 0.1f ,Random.value * 0.1f,0) ;
             SetDirection(reflectValue);
             BounceCount++;
         }

@@ -9,7 +9,10 @@ public class Brick : PoolableMono,IDamageable
     private static int _maxHp = 10;
     public UnityEvent OnBrickBreak;
     private Renderer _renderer;
-    private int _hp;
+
+
+    [SerializeField] private int _hp;
+
     public int HP
     {
         get => _hp;
@@ -31,9 +34,9 @@ public class Brick : PoolableMono,IDamageable
     {
         _hpTime = 0f;
         _hpText = transform.Find("HPText").GetComponent<TMP_Text>();
-        _renderer = GetComponent<Renderer>();
-        HP = Random.Range(1,_maxHp);
-        
+        _renderer = transform.Find("Renderer").GetComponent<Renderer>();
+        //HP = Random.Range(1,_maxHp);
+        HP = _hp;
         OnBrickBreak.AddListener(() => PoolManager.SInstance.Push(this));
     }
 
